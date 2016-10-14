@@ -29,8 +29,8 @@ def filter_words(words, skip_words):
     """
     word = []
     for remove_words in words:
-     if words not in skip_words:
-        word.append(remove_words)
+        if remove_words not in skip_words:
+                word.append(remove_words)
     return word
 
     
@@ -88,9 +88,8 @@ def normalise_input(user_input):
     words = no_punct.split()
 
     filters = filter_words(words, skip_words)
+
     return filters
-
-
 
     #
     # COMPLETE ME!
